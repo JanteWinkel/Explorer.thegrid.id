@@ -20,7 +20,7 @@ export const ProfileCard = ({ profile }: ProfileCardCardProps) => {
 
   return (
     <div className="ml-4">
-      <div className="relative mt-20 rounded-lg border-2 border-primary bg-white shadow-sm">
+      <div className="relative mt-20 rounded-lg border-2 border-primary background shadow-sm">
         <div className="relative -mt-16 flex w-full flex-col items-start gap-3 lg:absolute lg:-top-16 lg:left-[-24px] lg:mt-0 lg:flex-row">
           <div className="border-1 -ml-6 w-fit shrink-0 -rotate-3 rounded-xl  border-2 border-primary bg-white shadow-lg hover:scale-105 lg:ml-0">
             <Link target="_blank" href={paths.profile.detail(profile.slug)}>

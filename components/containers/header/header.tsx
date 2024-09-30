@@ -7,6 +7,7 @@ import { SiGithub } from 'react-icons/si';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import ThemeToggleButton from '@/components/ThemeToggleButton'; // Asegúrate de que la ruta sea correcta
 
 const learnMoreButton = (
   <Link
@@ -30,17 +31,8 @@ const claimProfileButton = (
   </Link>
 );
 
-const cloneRepoButton = (
-  <Link
-    href="https://github.com/The-Grid-Data/Explorer"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button className="w-full md:w-fit" variant="outline">
-      <SiGithub className="mr-2" size={18} />
-      Clone project
-    </Button>
-  </Link>
+const themeToggleButton = (
+  <ThemeToggleButton />
 );
 
 export const Header = () => {
@@ -60,7 +52,7 @@ export const Header = () => {
       <div className="hidden w-full items-center justify-end gap-2 md:flex">
         {learnMoreButton}
         {claimProfileButton}
-        {cloneRepoButton}
+        {themeToggleButton} {/* Cambiado de cloneRepoButton a themeToggleButton */}
       </div>
       <Sheet>
         <SheetTrigger asChild className="flex w-full items-center justify-end">
@@ -82,7 +74,7 @@ export const Header = () => {
               <SheetTrigger asChild>{learnMoreButton}</SheetTrigger>
             </li>
             <li>
-              <SheetTrigger asChild>{cloneRepoButton}</SheetTrigger>
+              <SheetTrigger asChild>{themeToggleButton}</SheetTrigger> {/* Añadido aquí también */}
             </li>
           </ul>
         </SheetContent>
